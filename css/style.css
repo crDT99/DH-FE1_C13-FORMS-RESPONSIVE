@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/********** ESTILOS PARA EL HEADER **********/
+
+header p {
+  background-color: #1cd1b0;
+  padding: 2px 0px 2px 10px;
+  font-size: 1vw;
+}
+
+h1 {
+  color: white;
+}
+.top-bar {
+  background-color: #00669f;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  height: 11.2vh;
+  flex-direction: column;
+}
+
+.top-banner {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.navbar {
+  background-color: black;
+  height: 3.6vh;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+  align-items: center;
+}
+
+.menu-burger {
+  background-color: #000000d4;
+  display: none;
+  padding: 1vw 7vw;
+  flex-direction: column;
+  position: absolute;
+  margin-top: 6vh;
+  transform: translateX(+100%);
+}
+
+.navbar li,
+.menu-burger li {
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1vw;
+}
+
+.menu-burger li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2vw;
+}
+
+.shop-logo {
+  height: 7.6vh;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+}
+.menu-burger-cont {
+  padding: 0vw 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+.menu-icon {
+  cursor: hand;
+  z-index: 10;
+}
+.menu-icon i {
+  font-size: 3rem;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu-burger {
+  transform: translateX(0);
+  transition: transform 0.3s;
+  display: flex;
+}
+
+/********** ESTILOS PARA EL MAIN **********/
+
+section.main-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+section article {
+  background-color: #f3f3f3;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 300px;
+}
+
+section article .contenedor {
+  height: 200px;
+  width: 300px;
+  border-radius: 16px 16px 0 0;
+  background-size: cover;
+}
+
+section article .contenedor i {
+  font-size: 24px;
+  color: red;
+  padding: 15px;
+}
+
+section article .bgBatman {
+  background-image: url("../img/fondoBatman.png");
+}
+section article .bgWonderWoman {
+  background-image: url("../img/fondoWonderWoman.png");
+}
+section article .bgHarley {
+  background-image: url("../img/fondoHarleyQuinn.png");
+}
+section article .bgSuperman {
+  background-image: url("../img/fondoSuperman.png");
+}
+
+section article img {
+  border-radius: 50%;
+  width: 125px;
+  position: absolute;
+  top: 130px;
+}
+
+section article h3 {
+  font-size: 24px;
+  margin-top: 70px;
+  text-transform: uppercase;
+}
+
+section article p {
+  font-size: 12px;
+  height: 120px;
+  margin: 10px 20px;
+  text-align: left;
+}
+
+section article button {
+  background-color: #00669f;
+  border: none;
+  color: white;
+
+  margin: 25px;
+  padding: 10px 30px;
+}
+section.add-btn-section {
+  padding-right: 1vw;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: 10;
+  top: 50vh;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.button-add {
+  background-color: #00669f;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 2vw;
+  position: absolute;
+}
+.WonderWoman-Card {
+  display: none;
+}
+
+/********** ESTILOS PARA EL FOOTER **********/
+
+footer {
+  background-color: #00669f;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.4vh;
+}
+
+footer img {
+  position: absolute;
+  right: 25px;
+  width: 100px;
+}
+
+/* -------------------------- MEDIA QUERIES -------------------------- */
+
+@media (max-width: 768px) {
+  /* TABLET SIZE */
+
+  h1 {
+    font-weight: 400;
+  }
+  header p {
+    background-color: #d1891c;
+    padding: 2px 0px 2px 10px;
+    font-size: 2vw;
+  }
+  section article {
+    margin: 50px 0;
+  }
+
+  .WonderWoman-Card {
+    display: inherit;
+  }
+
+  .shop-logo {
+    display: none;
+  }
+
+  .menu-burger-cont {
+    display: flex;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .top-bar {
+    height: 8vh;
+    padding-left: 1vw;
+  }
+  .button-add {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 460px) {
+  /* SMARTPHONE SIZE */
+
+  h1 {
+    font-size: 1.4rem;
+  }
+  .menu-icon i {
+    font-size: 2rem;
+  }
+
+  section article,
+  section article .contenedor {
+    width: 250px;
+  }
+  section article img {
+    width: 100px;
+  }
+
+  .Harley-Card {
+    display: none;
+  }
+
+  #superman-pic {
+    content: url("../img/superman2.png");
+  }
+  footer {
+    justify-content: space-between;
+    padding-left: 2vw;
+  }
+
+  footer p {
+    font-size: 0.7rem;
+  }
+}

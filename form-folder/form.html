@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Héroes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/form-styles.css" />
+  </head>
+  <body>
+    <header>
+      <p>Descuentos 20%</p>
+    </header>
+    <div class="top-bar">
+      <div class="top-banner">
+        <img src="../img/Logo.svg" alt="logo-de-tienda" class="shop-logo" />
+        <h1>Super Héroes Shop</h1>
+      </div>
+      <ul class="navbar">
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Registrarme</a></li>
+        <li><a href="#">Ingresar</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <section class="form-section">
+        <div class="form-container">
+          <form action="" method="">
+            <div class="form-title">
+              <h2>Añadí tu super!</h2>
+              <p>Agregá tu personaje favorito completando las opciones.</p>
+            </div>
+            <div class="form-field form-first-data">
+              <div class="input-cont">
+                <label for="nombre">*Nombre</label>
+                <input type="text" name="nombre" id="nombre" />
+              </div>
+              <div class="input-cont">
+                <label for="especie">*Especie</label>
+                <select name="especie" value="Especie" id="especie">
+                  <optgroup label="Especie">
+                    <option value="humano">humano</option>
+                    <option value="kriptoniano">kriptoniano</option>
+                    <option value="metahumanto">metahumanto</option>
+                    <option value="mutante">mutante</option>
+                    <option value="semidios">semidios</option>
+                    <option value="mitologico">mitologico</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="form-field form-second-data">
+              <div class="input-cont">
+                <label for="">Fecha</label>
+                <input type="date" name="fecha" id="fecha" />
+              </div>
+              <div class="input-cont">
+                <label for="">Agregar Foto</label>
+                <input type="file" name="hero-pic" id="hero-pic" />
+              </div>
+            </div>
+            <div class="form-field form-third-data">
+              <div class="input-cont text-cont">
+                <textarea
+                  name="text-description"
+                  id="text-description"
+                  cols="30"
+                  rows="10"
+                  placeholder="Descripción"
+                ></textarea>
+              </div>
+              <div class="input-cont">
+                <div class="input-cont">
+                  <!-- CHECKBOX -->
+                  <p>Poderes</p>
+                  <div class="poderes-cont">
+                    <!-- Volar -->
+                    <label for="Volar">
+                      <input
+                        type="checkbox"
+                        name="poderes"
+                        id="Volar"
+                        value="Volar"
+                      />Volar
+                    </label>
+                    <!-- SuperInteligencia -->
+                    <label for="SuperInteligencia">
+                      <input
+                        type="checkbox"
+                        name="poderes"
+                        id="SuperInteligencia"
+                        value="SuperInteligencia"
+                      />SuperInteligencia
+                    </label>
+                    <!-- Vista de rayo láser -->
+                    <label for="Vista de rayo láser">
+                      <input
+                        type="checkbox"
+                        name="poderes"
+                        id="Vista de rayo láser"
+                        value="Vista de rayo láser"
+                      />Vista de rayo láser
+                    </label>
+                    <!-- Billetera gorda -->
+                    <label for="Billetera gorda">
+                      <input
+                        type="checkbox"
+                        name="poderes"
+                        id="Billetera gorda"
+                        value="Billetera gorda"
+                      />Billetera gorda
+                    </label>
+                  </div>
+                </div>
+                <hr />
+                <div class="input-cont">
+                  <p>Tipo de personaje</p>
+                  <div class="radio-container">
+                    <label for="Héroe / Heroina">
+                      <input
+                        type="radio"
+                        name="tipo-de-personaje"
+                        id="Héroe / Heroina"
+                      />Héroe / Heroina
+                    </label>
+                    <label for="Villano / Villana">
+                      <input
+                        type="radio"
+                        name="tipo-de-personaje"
+                        id="Villano / Villana"
+                      />Villano / Villana
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-field Button-field">
+              <input type="submit" value="Añadir" />
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Todos los derechos reservados a FE1</p>
+      <img src="../img/gitHub.svg" alt="Logo de gitHub" />
+    </footer>
+  </body>
+</html>
